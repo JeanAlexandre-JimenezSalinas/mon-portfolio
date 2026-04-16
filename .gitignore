@@ -2,15 +2,11 @@
 Thumbs.db
 .DS_Store
 
-
 # Si vous utilisez npm un jour
 node_modules/
-
 
 # Fichiers de configuration personnels VS Code
 .vscode/settings.json
 
-
 # Logs
 *.log
-
