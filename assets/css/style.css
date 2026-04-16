@@ -1,0 +1,16 @@
+:root {
+  /* ── Modifiez ces couleurs pour personnaliser votre portfolio ── */
+  --bg-primary: #090e1b; /* fond sombre */
+  --bg-secondary: #1e293b; /* cartes et sections alternées */
+  --accent-color: #7c3aed; /* votre couleur signature — changez-la ! */
+  --accent-light: #a78bfa; /* version plus claire */
+  --text-primary: #f8fafc; /* texte principal */
+  --text-secondary: #94a3b8; /* texte secondaire */
+  --border-color: #334155; /* bordures */
+
+  --font-main: "Segoe UI", system-ui, sans-serif;
+  --spacing-sm: 1rem; /* 16px */
+  --spacing-md: 2rem; /* 32px */
+  --spacing-lg: 4rem; /* 64px */
+  --transition: 0.3s ease;
+}
