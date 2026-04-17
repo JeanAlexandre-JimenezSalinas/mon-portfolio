@@ -5,7 +5,7 @@
   --accent-color: #c8a27a; /* madera clara / dorado suave */
   --accent-light: #e6caa3; /* version plus claire */
   --text-primary: #2f2a24; /* texte principal */
-  --text-secondary: #6b6257; /* texte secondaire */
+  --text-secondary: #050504; /* texte secondaire */
   --border-color: #d8cbb8; /* bordures douces */
 
   --font-main: "Segoe UI", system-ui, sans-serif;
@@ -54,8 +54,8 @@ PLAN DU FICHIER :
   --accent-light: #e2ab57; /* tono más claro */
   --accent-teal: #6cb163; /* verde pastel natural */
 
-  --text-primary: #2f2a24; /* texte principal */
-  --text-secondary: #ece6df; /* texte secondaire */
+  --text-primary: #94887a; /* texte principal */
+  --text-secondary: #383636; /* texte secondaire */
   --text-muted: #9a9186; /* texte discret */
 
   --border-color: #d8cbb8; /* bordures douces */
@@ -184,7 +184,7 @@ ul {
   border-color: var(--accent-color);
 }
 .btn-primary:hover {
-  background-color: #dbd9df;
+  background-color: #f75f07a4;
   border-color: #d99228;
   transform: translateY(-2px); /* léger soulèvement au survol */
   box-shadow: 0 8px 25px rgba(237, 58, 58, 0.4);
@@ -218,12 +218,12 @@ ul {
 .tag {
   display: inline-block;
   padding: 0.25rem 0.75rem;
-  background-color: rgba(124, 58, 237, 0.2);
+  background-color: rgba(248, 248, 248, 0.2);
   color: var(--accent-light);
   border-radius: var(--radius-full);
   font-size: 0.8rem;
   font-weight: 500;
-  border: 1px solid rgba(124, 58, 237, 0.4);
+  border: 1px solid rgba(245, 245, 245, 0.4);
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -235,7 +235,7 @@ ul {
   left: 0;
   right: 0;
   z-index: 1000; /* au-dessus de tout le reste */
-  background-color: rgba(15, 23, 42, 0.9);
+  background-color: rgb(255, 255, 255);
   backdrop-filter: blur(12px); /* flou de l'arrière-plan (glassmorphism) */
   border-bottom: 1px solid var(--border-color);
   transition: all var(--transition);
@@ -243,7 +243,7 @@ ul {
 
 /* Classe ajoutée par JS quand on scrolle — rend la nav plus opaque */
 .navbar.scrolled {
-  background-color: rgba(15, 23, 42, 0.98);
+  background-color: rgba(243, 213, 173, 0.98);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -532,7 +532,7 @@ ul {
 .project-card:hover {
   transform: translateY(-8px);
   border-color: var(--accent-color);
-  box-shadow: 0 20px 40px rgba(124, 58, 237, 0.2);
+  box-shadow: 0 20px 40px rgb(255, 255, 255);
 }
 
 /* Image du projet avec position relative pour l'overlay */
@@ -622,7 +622,7 @@ ul {
 .contact-icon {
   width: 48px;
   height: 48px;
-  background-color: rgba(124, 58, 237, 0.2);
+  background-color: rgba(255, 0, 0, 0.2);
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
@@ -685,7 +685,7 @@ input:focus,
 textarea:focus {
   outline: none;
   border-color: var(--accent-color);
-  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+  box-shadow: 0 0 0 3px rgba(241, 6, 6, 0.2);
 }
 
 /* Champ invalide (classe ajoutée par JS) */
@@ -768,7 +768,7 @@ textarea.invalid {
   pointer-events: auto;
 }
 .back-to-top:hover {
-  background-color: #6d28d9;
+  background-color: #db4618;
   transform: translateY(-3px);
 }
 
