@@ -59,15 +59,20 @@ if (skillsSection) skillObserver.observe(skillsSection);
 
 
 //Validacion du formulaire
+const contactForm = document.getElementById("contact-form");
+
 if (contactForm) {
   contactForm.addEventListener("submit", (e) => {
+    e.preventDefault(); // ⭐ IMPORTANT
+
     let isValid = true;
 
     const name = document.getElementById("name");
     const email = document.getElementById("email");
     const message = document.getElementById("message");
+    const successMessage = document.getElementById("success-message");
 
-    // Validaciones...
+    // NAME
     if (!name.value.trim()) {
       document.getElementById("name-error").textContent = "Votre nom est requis";
       isValid = false;
@@ -75,6 +80,7 @@ if (contactForm) {
       document.getElementById("name-error").textContent = "";
     }
 
+    // EMAIL
     const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value);
     if (!emailOk) {
       document.getElementById("email-error").textContent = "Email invalide";
@@ -83,6 +89,7 @@ if (contactForm) {
       document.getElementById("email-error").textContent = "";
     }
 
+    // MESSAGE
     if (!message.value.trim()) {
       document.getElementById("message-error").textContent = "Message requis";
       isValid = false;
@@ -90,9 +97,17 @@ if (contactForm) {
       document.getElementById("message-error").textContent = "";
     }
 
-    // SOLO si es inválido se bloquea
-    if (!isValid) {
-      e.preventDefault(); // ← SOLO aquí
+    // ENVOI si OK
+    if (isValid) {
+      successMessage.style.display = "block";
+
+      // optionnel: reset form
+      contactForm.reset();
+
+      // optionnel: envoi manuel vers Formspree
+      contactForm.submit();
+    } else {
+      successMessage.style.display = "none";
     }
   });
   
