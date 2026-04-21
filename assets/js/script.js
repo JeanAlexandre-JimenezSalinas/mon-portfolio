@@ -61,49 +61,47 @@ if (skillsSection) skillObserver.observe(skillsSection);
 //Validacion du formulaire
 if (contactForm) {
   contactForm.addEventListener("submit", (e) => {
-    e.preventDefault(); // empêche le rechargement de la page
     let isValid = true;
 
     const name = document.getElementById("name");
     const email = document.getElementById("email");
     const message = document.getElementById("message");
 
-    // Vérifier le nom
+    // Validaciones...
     if (!name.value.trim()) {
-      document.getElementById("name-error").textContent =
-        "Votre nom est requis";
-      name.classList.add("invalid");
+      document.getElementById("name-error").textContent = "Votre nom est requis";
       isValid = false;
     } else {
       document.getElementById("name-error").textContent = "";
-      name.classList.remove("invalid");
     }
 
-    // Vérifier l'email avec une regex
     const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value);
     if (!emailOk) {
       document.getElementById("email-error").textContent = "Email invalide";
-      email.classList.add("invalid");
       isValid = false;
     } else {
       document.getElementById("email-error").textContent = "";
-      email.classList.remove("invalid");
     }
 
-    // Vérifier le message
     if (!message.value.trim()) {
       document.getElementById("message-error").textContent = "Message requis";
-      message.classList.add("invalid");
       isValid = false;
     } else {
       document.getElementById("message-error").textContent = "";
-      message.classList.remove("invalid");
     }
 
-    if (isValid) {
-      document.getElementById("success-message").style.display = "block";
-      contactForm.reset();
+    // SOLO si es inválido se bloquea
+    if (!isValid) {
+      e.preventDefault(); // ← SOLO aquí
     }
   });
+  
+  //mailto:
+ const emailLinks = document.querySelectorAll(".email-link");
+
+emailLinks.forEach((link) => {
+  const email = "Jalexanjs88@gmail.com";
+  link.href = `mailto:${email}`;
+});
 }
 
