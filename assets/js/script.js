@@ -112,6 +112,67 @@ if (backToTop) {
   });
 }
 
+
+/* section class=hero animation*__________________________________*/
+window.addEventListener('load', () => {
+
+  const heroElements = document.querySelectorAll(
+    '.hero-content > *, .hero-image'
+  );
+
+  // Estado inicial
+  heroElements.forEach(el => {
+    el.style.opacity = 0;
+    el.style.transform = 'translateY(30px) scale(0.95)';
+    el.style.filter = 'blur(8px)';
+  });
+
+  // Delay global de 1 segundo
+  setTimeout(() => {
+
+    heroElements.forEach((el, index) => {
+
+      setTimeout(() => {
+        el.style.transition = `
+          opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+          transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+          filter 0.8s ease
+        `;
+
+        el.style.opacity = 1;
+        el.style.transform = 'translateY(0) scale(1)';
+        el.style.filter = 'blur(0)';
+      }, index * 180); // stagger más elegante
+
+    });
+
+  }, 1000);
+
+});
+/*Hero paralax effect */
+const hero = document.querySelector('.hero');
+const photo = document.querySelector('.profile-photo');
+
+if (hero && photo) {
+  hero.addEventListener('mousemove', (e) => {
+
+    const { width, height, left, top } = hero.getBoundingClientRect();
+
+    const x = (e.clientX - left) / width - 0.5;
+    const y = (e.clientY - top) / height - 0.5;
+
+    photo.style.transform = `
+      translateY(${y * -20}px)
+      translateX(${x * -20}px)
+      scale(1.03)
+    `;
+  });
+
+  hero.addEventListener('mouseleave', () => {
+    photo.style.transform = 'translate(0, 0) scale(1)';
+  });
+}
+
 /* ═══════════════════════════════════════════════════════════════
    3. BARRES DE COMPÉTENCES — animation
    ══════════════════════════════════════════════════════════════
