@@ -401,7 +401,7 @@ const statCards = document.querySelectorAll('.stat-card');
 statCards.forEach(card => {
   card.addEventListener('click', () => {
 
-    const sound = new Audio('../../img/mono2.mp3');
+    const sound = new Audio('assets/sounds/mono2.mp3');
     sound.volume = 0.6;
 
     sound.play().catch(err => {
