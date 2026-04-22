@@ -103,11 +103,22 @@ html {
 }
 
 body {
+  background: none; /* 👈 importante */
+  position: relative;
+}
+
+/* fondo estable */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
   background-image: url("../../img/background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  z-index: -1;
+  transform: translateZ(0); /* fuerza capa GPU */
+  will-change: transform;
 }
 
 
