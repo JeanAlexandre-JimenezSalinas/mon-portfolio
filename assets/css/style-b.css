@@ -103,24 +103,18 @@ html {
 }
 
 body {
-  background: none; /* 👈 importante */
-  position: relative;
-}
+  font-family: var(--font-main);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.7;
+  overflow-x: hidden;
 
-/* fondo estable */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
   background-image: url("../../img/background.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: -1;
-  transform: translateZ(0); /* fuerza capa GPU */
-  will-change: transform;
+  background-size: cover;        /* clave */
+  background-position: center;   /* 👈 centra siempre */
+  background-repeat: no-repeat;   /* evita repetición */
+  background-attachment: fixed;
 }
-
 
 /* Liens : on enlève le soulignement par défaut */
 a {
