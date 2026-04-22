@@ -992,21 +992,14 @@ textarea.invalid {
 .section-title,
 .nav-logo {
   text-shadow:
-    1px 1px 0 rgba(255,255,255,3),
-   -1px 1px 0 rgba(255,255,255,3),
-    1px -1px 0 rgba(255,255,255,3),
-   -1px -1px 0 rgba(255,255,255,3);
+    1px 1px 0 rgba(255,255,255,1),
+   -1px 1px 0 rgba(255,255,255,1),
+    1px -1px 0 rgba(255,255,255,1),
+   -1px -1px 0 rgba(255,255,255,1);
 }
 
 .hero-title,
 .section-title {
-  -webkit-text-stroke: 1px rgb(245, 239, 212);
+  -webkit-text-stroke: 0.3px rgb(245, 239, 212);
 }
 
-@media (max-width: 600px) {
-  .hero-title,
-  .section-title,
-  .nav-logo {
-    -webkit-text-stroke: 0.3px rgba(255,255,255,0.4);
-  }
-}
