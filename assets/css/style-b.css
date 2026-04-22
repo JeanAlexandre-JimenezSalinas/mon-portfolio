@@ -103,18 +103,13 @@ html {
 }
 
 body {
-  font-family: var(--font-main);
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-  line-height: 1.7;
-  overflow-x: hidden;
-
   background-image: url("../../img/background.png");
-  background-size: cover;        /* clave */
-  background-position: center;   /* 👈 centra siempre */
-  background-repeat: no-repeat;   /* evita repetición */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
 
 /* Liens : on enlève le soulignement par défaut */
 a {
