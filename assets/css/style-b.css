@@ -1002,3 +1002,11 @@ textarea.invalid {
 .section-title {
   -webkit-text-stroke: 1px rgb(245, 239, 212);
 }
+
+@media (max-width: 600px) {
+  .hero-title,
+  .section-title,
+  .nav-logo {
+    -webkit-text-stroke: 0.3px rgba(255,255,255,0.4);
+  }
+}
