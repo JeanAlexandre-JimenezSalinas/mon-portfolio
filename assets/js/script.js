@@ -395,3 +395,25 @@ POUR ALLER PLUS LOIN — idées de fonctionnalités à ajouter :
 • Particles.js pour un fond animé
 ══════════════════════════════════════════════════════════════════
 */
+
+const statCards = document.querySelectorAll('.stat-card');
+
+statCards.forEach(card => {
+  card.addEventListener('click', () => {
+
+    const sound = new Audio('../../img/mono2.mp3');
+    sound.volume = 0.6;
+
+    sound.play().catch(err => {
+      console.log('Audio bloqueado:', err);
+    });
+
+    // opcional: pequeño efecto visual
+    card.classList.add('shake');
+
+    setTimeout(() => {
+      card.classList.remove('shake');
+    }, 300);
+
+  });
+});
