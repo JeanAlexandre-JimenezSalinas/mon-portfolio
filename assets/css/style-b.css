@@ -941,7 +941,7 @@ textarea.invalid {
   /* Navigation mobile : menu burger */
   .nav-links {
     position: fixed;
-    top: 65px;
+    top: -15px;
     left: 0;
     right: 0;
     background-color: var(--bg-secondary);
