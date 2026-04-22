@@ -54,7 +54,7 @@ PLAN DU FICHIER :
   --accent-light: #e2ab57; /* tono más claro */
   --accent-teal: #6cb163; /* verde pastel natural */
 
-  --text-primary: #553939; /* texte principal */
+  --text-primary: #422828; /* texte principal */
   --text-secondary: #383636; /* texte secondaire */
   --text-muted: #9a9186; /* texte discret */
 
@@ -992,10 +992,14 @@ textarea.invalid {
 .section-title,
 .nav-logo {
   text-shadow:
-    1px 1px 0 rgba(255,255,255,1),
-   -1px 1px 0 rgba(255,255,255,1),
-    1px -1px 0 rgba(255,255,255,1),
-   -1px -1px 0 rgba(255,255,255,1);
+    1px 1px 0 rgba(255,255,255,0.6),
+   -1px 1px 0 rgba(255,255,255,0.6),
+    1px -1px 0 rgba(255,255,255,0.6),
+   -1px -1px 0 rgba(255,255,255,0.6);
+
+   text-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.6),
+    0 0 25px rgba(253, 253, 253, 0.699);
 }
 
 .hero-title,
@@ -1003,3 +1007,10 @@ textarea.invalid {
   -webkit-text-stroke: 0.3px rgb(245, 239, 212);
 }
 
+@media (max-width: 600px) {
+  .hero-title,
+  .section-title,
+  .nav-logo {
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  }
+}
