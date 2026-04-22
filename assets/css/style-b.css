@@ -107,7 +107,13 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.7;
-  overflow-x: hidden; /* cache le défilement horizontal indésirable */
+  overflow-x: hidden;
+
+  background-image: url("../../img/background.png");
+  background-size: cover;        /* clave */
+  background-position: center;   /* 👈 centra siempre */
+  background-repeat: no-repeat;   /* evita repetición */
+  background-attachment: fixed;
 }
 
 /* Liens : on enlève le soulignement par défaut */
@@ -338,16 +344,6 @@ ul {
   100% { transform: translateY(0px); }
 }
 
-/*background*/
-.hero {
-  background-image: url("img\background.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-}
-
-/*_____________________________________________________________*/
 .profile-photo {
   animation: float 4s ease-in-out infinite;
 }
@@ -420,8 +416,43 @@ ul {
    6. À PROPOS
 ═══════════════════════════════════════════════════════════════ */
 .about {
+  position: relative;
   padding: var(--spacing-xl) var(--spacing-sm);
   background-color: var(--bg-secondary);
+
+  overflow: visible; /* permite que sobresalga el borde */
+}
+
+/* BASE común para ambos bordes */
+.about::before,
+.about::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 70px; /* ajusta según el tamaño de tu imagen */
+
+  background-image: url("../../img/bananas-border.png");
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: contain;
+
+  pointer-events: none;
+  z-index: 2; /* asegura que esté encima */
+}
+
+/* 🔼 Borde superior (sobresale hacia arriba) */
+.about::before {
+  top: 0;
+  transform: translateY(-50%);
+  filter: drop-shadow(0 -15px 10px rgba(0, 0, 0, 0.70));
+}
+
+/* 🔽 Borde inferior (sobresale hacia abajo) */
+.about::after {
+  bottom: 0;
+  transform: translateY(50%) rotate(180deg);
+  filter: drop-shadow(0 -15px 10px rgba(0, 0, 0, 0.70));
 }
 
 .about-grid {
@@ -539,8 +570,43 @@ ul {
    8. PROJETS
 ═══════════════════════════════════════════════════════════════ */
 .projects {
+  position: relative;
   padding: var(--spacing-xl) var(--spacing-sm);
   background-color: var(--bg-secondary);
+
+  overflow: visible; /* permite que sobresalga el borde */
+}
+
+/* BASE común */
+.projects::before,
+.projects::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 70px; /* ajusta según tu PNG */
+
+  background-image: url("../../img/bananas-border.png");
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: contain;
+
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* 🔼 borde superior */
+.projects::before {
+  top: 0;
+  transform: translateY(-50%);
+  filter: drop-shadow(0 -15px 10px rgba(0, 0, 0, 0.70));
+}
+
+/* 🔽 borde inferior */
+.projects::after {
+  bottom: 0;
+  transform: translateY(50%) rotate(180deg);
+  filter: drop-shadow(0 -15px 10px rgba(0, 0, 0, 0.70));
 }
 
 .projects-grid {
