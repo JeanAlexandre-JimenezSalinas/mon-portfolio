@@ -54,7 +54,7 @@ PLAN DU FICHIER :
   --accent-light: #e2ab57; /* tono más claro */
   --accent-teal: #6cb163; /* verde pastel natural */
 
-  --text-primary: #94887a; /* texte principal */
+  --text-primary: #553939; /* texte principal */
   --text-secondary: #383636; /* texte secondaire */
   --text-muted: #9a9186; /* texte discret */
 
@@ -985,4 +985,20 @@ textarea.invalid {
   50% { transform: translateX(5px); }
   75% { transform: translateX(-5px); }
   100% { transform: translateX(0); }
+}
+
+/*Text border*/
+.hero-title,
+.section-title,
+.nav-logo {
+  text-shadow:
+    1px 1px 0 rgba(255,255,255,3),
+   -1px 1px 0 rgba(255,255,255,3),
+    1px -1px 0 rgba(255,255,255,3),
+   -1px -1px 0 rgba(255,255,255,3);
+}
+
+.hero-title,
+.section-title {
+  -webkit-text-stroke: 1px rgb(245, 239, 212);
 }
