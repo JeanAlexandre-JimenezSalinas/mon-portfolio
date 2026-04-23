@@ -416,11 +416,13 @@ ul {
    6. À PROPOS
 ═══════════════════════════════════════════════════════════════ */
 .about {
-  position: relative;
+   position: relative;
   padding: var(--spacing-xl) var(--spacing-sm);
-  background-color: var(--bg-secondary);
 
-  overflow: visible; /* permite que sobresalga el borde */
+  background-image: url("../../img/backgroundB.webp"); /* 👈 cambia por tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* BASE común para ambos bordes */
@@ -573,7 +575,7 @@ ul {
   position: relative;
   padding: var(--spacing-xl) var(--spacing-sm);
   background-color: var(--bg-secondary);
-
+  background-image: url("../../img/backgroundB.webp"); 
   overflow: visible; /* permite que sobresalga el borde */
 }
 
