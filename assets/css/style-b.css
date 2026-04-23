@@ -936,6 +936,9 @@ textarea.invalid {
 /* Tablette et mobile (< 900px) */
 @media (max-width: 900px) {
   .hero {
+    min-height: auto;
+    padding: 5rem 1rem 2rem;
+    gap: 2rem;
     flex-direction: column; /* passage en colonne */
     text-align: center;
     padding-top: 8rem;
