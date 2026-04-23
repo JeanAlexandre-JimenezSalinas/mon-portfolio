@@ -1055,10 +1055,3 @@ textarea.invalid {
     top: -130px;
   }
 }
-
-@media (max-width: 600px) {
-  .about {
-    background-size: contain;
-    background-position: top center;
-  }
-}
