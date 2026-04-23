@@ -1056,3 +1056,7 @@ textarea.invalid {
     top: -130px;
   }
 }
+
+html, body {
+  overscroll-behavior: none;
+}
