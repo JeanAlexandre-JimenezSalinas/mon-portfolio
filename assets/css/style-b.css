@@ -1,7 +1,7 @@
 :root {
   /* ── Modifiez ces couleurs pour personnaliser votre portfolio ── */
-  --bg-primary: #f6f1e7; /* fond clair type bois / papier */
-  --bg-secondary: #efe6d8; /* cartes et sections alternées */
+  --bg-primary: #000000; /* fond clair type bois / papier */
+  --bg-secondary: #000000; /* cartes et sections alternées */
   --accent-color: #c8a27a; /* madera clara / dorado suave */
   --accent-light: #e6caa3; /* version plus claire */
   --text-primary: #2f2a24; /* texte principal */
@@ -42,16 +42,16 @@ PLAN DU FICHIER :
    1. VARIABLES CSS
 ═══════════════════════════════════════════════════════════════ */
 :root {
-  --bg-primary: #f6f1e7;
-  --bg-secondary: #efe6d8;
-  --bg-card: #f8f3ea;
+  --bg-primary: #000000;
+  --bg-secondary: #000000;
+  --bg-card: #000000;
 
   --accent-color: #c8a27a;
   --accent-light: #e2ab57;
   --accent-teal: #6cb163;
 
-  --text-primary: #422828;
-  --text-secondary: #383636;
+  --text-primary: #ffffff;
+  --text-secondary: #ffffff;
   --text-muted: #9a9186;
 
   --border-color: #d8cbb8;
@@ -234,14 +234,14 @@ ul {
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(3, 29, 1);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-color);
   transition: all var(--transition);
 }
 
 .navbar.scrolled {
-  background-color: rgba(243, 213, 173, 0.98);
+  background-color: rgba(0, 0, 0, 0.98);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -447,13 +447,13 @@ ul {
 .about::before {
   top: 0;
   transform: translateY(-50%);
-  filter: drop-shadow(0 -15px 10px rgba(0, 0, 0, 0.70));
+  filter: drop-shadow(0 -2px 2px rgba(0, 0, 0, 0.7));
 }
 
 .about::after {
   bottom: 0;
   transform: translateY(50%) rotate(180deg);
-  filter: drop-shadow(0 -15px 10px rgba(0, 0, 0, 0.70));
+  filter: drop-shadow(0 5px 2px rgba(0, 0, 0, 0.7));
 }
 
 .about-grid {
@@ -592,13 +592,13 @@ ul {
 .projects::before {
   top: 0;
   transform: translateY(-50%);
-  filter: drop-shadow(0 -15px 10px rgba(0, 0, 0, 0.70));
+  filter: drop-shadow(0 -2px 2px rgba(0, 0, 0, 0.7));
 }
 
 .projects::after {
   bottom: 0;
   transform: translateY(50%) rotate(180deg);
-  filter: drop-shadow(0 -15px 10px rgba(0, 0, 0, 0.70));
+  filter: drop-shadow(0 5px 2px rgba(0, 0, 0, 0.7));
 }
 
 .projects-grid {
@@ -911,14 +911,10 @@ textarea.invalid {
 .section-title,
 .nav-logo {
   text-shadow:
-    0 4px 10px rgba(0, 0, 0, 0.6),
-    0 0 25px rgba(253, 253, 253, 0.699);
+    0 4px 10px rgba(0, 0, 0, 1),
+    0 0 25px rgba(0, 0, 0, 1);
 }
 
-.hero-title,
-.section-title {
-  -webkit-text-stroke: 0.3px rgb(245, 239, 212);
-}
 
 /* ═══════════════════════════════════════════════════════════════
    13. RESPONSIVE
@@ -1010,7 +1006,7 @@ textarea.invalid {
   .hero-title,
   .section-title,
   .nav-logo {
-    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 1);
   }
 
   .top-vines {
