@@ -40,60 +40,49 @@ PLAN DU FICHIER :
 
 /* ═══════════════════════════════════════════════════════════════
    1. VARIABLES CSS
-   Les variables (--nom) permettent de changer les couleurs
-   d'un seul endroit plutôt que partout dans le fichier.
-   Essayez de changer --accent-color et voyez l'effet !
 ═══════════════════════════════════════════════════════════════ */
 :root {
-  /* ── Couleurs principales ── */
-  --bg-primary: #f6f1e7; /* Fond clair type bois / papier */
-  --bg-secondary: #efe6d8; /* Fond des cartes */
-  --bg-card: #f8f3ea; /* Fond des éléments en relief */
+  --bg-primary: #f6f1e7;
+  --bg-secondary: #efe6d8;
+  --bg-card: #f8f3ea;
 
-  --accent-color: #c8a27a; /* madera clara / dorado suave */
-  --accent-light: #e2ab57; /* tono más claro */
-  --accent-teal: #6cb163; /* verde pastel natural */
+  --accent-color: #c8a27a;
+  --accent-light: #e2ab57;
+  --accent-teal: #6cb163;
 
-  --text-primary: #422828; /* texte principal */
-  --text-secondary: #383636; /* texte secondaire */
-  --text-muted: #9a9186; /* texte discret */
+  --text-primary: #422828;
+  --text-secondary: #383636;
+  --text-muted: #9a9186;
 
-  --border-color: #d8cbb8; /* bordures douces */
+  --border-color: #d8cbb8;
 
-  /* ── Typographie ── */
   --font-main: "Segoe UI", system-ui, -apple-system, sans-serif;
   --font-code: "Consolas", "Courier New", monospace;
 
-  /* ── Espacements ── */
-  --spacing-xs: 0.5rem; /*  8px */
-  --spacing-sm: 1rem; /* 16px */
-  --spacing-md: 2rem; /* 32px */
-  --spacing-lg: 4rem; /* 64px */
-  --spacing-xl: 6rem; /* 96px */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 6rem;
 
-  /* ── Rayons des coins arrondis ── */
   --radius-sm: 6px;
   --radius-md: 12px;
   --radius-lg: 20px;
-  --radius-full: 9999px; /* Pilule / cercle */
+  --radius-full: 9999px;
 
-  /* ── Transitions ── */
   --transition: 0.3s ease;
 }
 
 /*TOP VINES*/
 .top-vines {
   position: absolute;
-  top: -200px; /* altura de tu navbar */
+  top: -200px;
   left: 0;
   width: 100%;
   height: 760px;
-
   background: url("../../img/lianas.webp") top center / 100% auto no-repeat;
-
   pointer-events: none;
   z-index: 2;
-
   animation: sway 8s ease-in-out infinite alternate;
   transform-origin: top center;
 }
@@ -106,14 +95,9 @@ PLAN DU FICHIER :
   opacity: 0.3;
 }
 
-
 /* ═══════════════════════════════════════════════════════════════
    2. RESET & BASE
-   On neutralise les styles par défaut des navigateurs
-   pour partir d'une base propre et identique partout.
 ═══════════════════════════════════════════════════════════════ */
-
-/* Box-sizing : inclut padding et border dans la largeur totale */
 *,
 *::before,
 *::after {
@@ -123,9 +107,8 @@ PLAN DU FICHIER :
 }
 
 html {
-  /* scroll-behavior: smooth = défilement fluide quand on clique un lien ancre */
   scroll-behavior: smooth;
-  font-size: 16px; /* 1rem = 16px */
+  font-size: 16px;
 }
 
 body {
@@ -135,29 +118,25 @@ body {
   color: var(--text-primary);
   line-height: 1.7;
   overflow-x: hidden;
-  margin-bottom: 0px;
-
+  margin-bottom: 0;
   background-image: url("../../img/background.webp");
-  background-size: cover;        /* clave */
-  background-position: center;   /* 👈 centra siempre */
-  background-repeat: no-repeat;   /* evita repetición */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-/* Liens : on enlève le soulignement par défaut */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Images : jamais plus larges que leur conteneur */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* Listes : on enlève les puces par défaut */
 ul {
   list-style: none;
 }
@@ -165,21 +144,14 @@ ul {
 /* ═══════════════════════════════════════════════════════════════
    3. COMPOSANTS RÉUTILISABLES
 ═══════════════════════════════════════════════════════════════ */
-
-/* Container : limite la largeur du contenu et le centre */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 var(--spacing-sm);
 }
 
-/* Titres de section */
 .section-title {
-  font-size: clamp(
-    1.8rem,
-    4vw,
-    2.5rem
-  ); /* responsive : s'adapte à la taille d'écran */
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 700;
   text-align: center;
   margin-bottom: var(--spacing-sm);
@@ -192,12 +164,10 @@ ul {
   font-size: 1.1rem;
 }
 
-/* Texte en couleur accent */
 .highlight {
   color: var(--accent-light);
 }
 
-/* ── Boutons ── */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -211,7 +181,6 @@ ul {
   transition: all var(--transition);
 }
 
-/* Bouton plein (principal) */
 .btn-primary {
   background-color: var(--accent-color);
   color: white;
@@ -220,11 +189,10 @@ ul {
 .btn-primary:hover {
   background-color: #f75f07a4;
   border-color: #d99228;
-  transform: translateY(-2px); /* léger soulèvement au survol */
+  transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(237, 58, 58, 0.4);
 }
 
-/* Bouton contour */
 .btn-outline {
   background-color: transparent;
   color: var(--accent-light);
@@ -236,19 +204,16 @@ ul {
   transform: translateY(-2px);
 }
 
-/* Petit bouton (pour les cartes projets) */
 .btn-small {
   padding: 0.4rem 1rem;
   font-size: 0.85rem;
 }
 
-/* Bouton pleine largeur (formulaire) */
 .btn-full {
   width: 100%;
   justify-content: center;
 }
 
-/* Tags (labels de technologie) */
 .tag {
   display: inline-block;
   padding: 0.25rem 0.75rem;
@@ -275,7 +240,6 @@ ul {
   transition: all var(--transition);
 }
 
-/* Classe ajoutée par JS quand on scrolle — rend la nav plus opaque */
 .navbar.scrolled {
   background-color: rgba(243, 213, 173, 0.98);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -310,7 +274,6 @@ ul {
   padding-bottom: 2px;
   transition: color var(--transition);
 }
-/* Soulignement qui glisse au survol */
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -328,9 +291,8 @@ ul {
   width: 100%;
 }
 
-/* Bouton burger — 3 traits (visible seulement sur mobile) */
 .burger {
-  display: none; /* caché sur desktop */
+  display: none;
   flex-direction: column;
   gap: 5px;
   background: none;
@@ -346,7 +308,6 @@ ul {
   border-radius: 2px;
   transition: all var(--transition);
 }
-/* Animation du burger en X quand ouvert (classe ajoutée par JS) */
 .burger.open span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
@@ -360,12 +321,13 @@ ul {
 /* ═══════════════════════════════════════════════════════════════
    5. HERO
 ═══════════════════════════════════════════════════════════════ */
-.hero-content > *,
+.hero-content > *:not(.hero-title),
 .hero-image {
   opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  filter: blur(8px);
 }
 
-/* paralax effect */
 @keyframes float {
   0%   { transform: translateY(0px); }
   50%  { transform: translateY(-12px); }
@@ -390,7 +352,6 @@ ul {
 
 .hero-content {
   flex: 1;
-  /* Classe .reveal ajoutée par JS pour l'animation d'apparition */
 }
 
 .hero-subtitle {
@@ -401,10 +362,23 @@ ul {
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 6vw, 4rem);
+ font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 800;
-  line-height: 1.15;
+  line-height: 1.2;
   margin-bottom: var(--spacing-sm);
+  min-height: 2.4em;
+}
+
+.hero-word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.hero-letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-140px) scale(0.85);
+  will-change: transform, opacity;
 }
 
 .hero-role {
@@ -434,53 +408,48 @@ ul {
 .profile-photo {
   width: 600px;
   height: 600px;
-  object-fit: cover; /* recadre l'image pour remplir le cercle */
-  border-radius: 50%; /* cercle parfait */
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .skill-progress {
   width: 0;
   transition: width 1.2s ease-in-out;
 }
+
 /* ═══════════════════════════════════════════════════════════════
    6. À PROPOS
 ═══════════════════════════════════════════════════════════════ */
 .about {
-   position: relative;
+  position: relative;
   padding: var(--spacing-xl) var(--spacing-sm);
-
-  background-image: url("../../img/backgroundB.webp"); /* 👈 cambia por tu imagen */
+  background-image: url("../../img/backgroundB.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-/* BASE común para ambos bordes */
 .about::before,
 .about::after {
   content: "";
   position: absolute;
   left: 0;
   width: 100%;
-  height: 70px; /* ajusta según el tamaño de tu imagen */
-
+  height: 70px;
   background-image: url("../../img/bananas-border.png");
   background-repeat: repeat-x;
   background-position: center;
   background-size: contain;
-
   pointer-events: none;
-  z-index: 2; /* asegura que esté encima */
+  z-index: 2;
 }
 
-/* 🔼 Borde superior (sobresale hacia arriba) */
 .about::before {
   top: 0;
   transform: translateY(-50%);
   filter: drop-shadow(0 -15px 10px rgba(0, 0, 0, 0.70));
 }
 
-/* 🔽 Borde inferior (sobresale hacia abajo) */
 .about::after {
   bottom: 0;
   transform: translateY(50%) rotate(180deg);
@@ -504,7 +473,6 @@ ul {
   margin-top: var(--spacing-sm);
 }
 
-/* Grille de stats 2x2 */
 .about-stats {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -580,7 +548,6 @@ ul {
   font-weight: 600;
 }
 
-/* La barre grise (fond) */
 .skill-bar {
   height: 8px;
   background-color: var(--border-color);
@@ -588,14 +555,12 @@ ul {
   overflow: hidden;
 }
 
-/* La barre colorée (progression) */
-/* Sa largeur est définie par JS en lisant data-level */
 .skill-progress {
   height: 100%;
-  width: 0; /* démarre à 0, JS l'anime jusqu'à data-level */
+  width: 0;
   background: linear-gradient(90deg, var(--accent-color), var(--accent-teal));
   border-radius: var(--radius-full);
-  transition: width 1.2s ease-out; /* l'animation elle-même */
+  transition: width 1.2s ease-out;
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -605,36 +570,31 @@ ul {
   position: relative;
   padding: var(--spacing-xl) var(--spacing-sm);
   background-color: var(--bg-secondary);
-  background-image: url("../../img/backgroundB.webp"); 
-  overflow: visible; /* permite que sobresalga el borde */
+  background-image: url("../../img/backgroundB.webp");
+  overflow: visible;
 }
 
-/* BASE común */
 .projects::before,
 .projects::after {
   content: "";
   position: absolute;
   left: 0;
   width: 100%;
-  height: 70px; /* ajusta según tu PNG */
-
+  height: 70px;
   background-image: url("../../img/bananas-border.png");
   background-repeat: repeat-x;
   background-position: center;
   background-size: contain;
-
   pointer-events: none;
   z-index: 2;
 }
 
-/* 🔼 borde superior */
 .projects::before {
   top: 0;
   transform: translateY(-50%);
   filter: drop-shadow(0 -15px 10px rgba(0, 0, 0, 0.70));
 }
 
-/* 🔽 borde inferior */
 .projects::after {
   bottom: 0;
   transform: translateY(50%) rotate(180deg);
@@ -652,7 +612,7 @@ ul {
   background-color: var(--bg-primary);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
-  overflow: hidden; /* cache ce qui dépasse (overlay) */
+  overflow: hidden;
   transition: all var(--transition);
 }
 .project-card:hover {
@@ -661,7 +621,6 @@ ul {
   box-shadow: 0 20px 40px rgb(255, 255, 255);
 }
 
-/* Image du projet avec position relative pour l'overlay */
 .project-image {
   position: relative;
   overflow: hidden;
@@ -674,25 +633,24 @@ ul {
   transition: transform var(--transition);
 }
 .project-card:hover .project-image img {
-  transform: scale(1.05); /* légère mise en avant au survol */
+  transform: scale(1.05);
 }
 
-/* Overlay sombre qui apparaît au survol */
 .project-overlay {
   position: absolute;
-  inset: 0; /* = top:0, right:0, bottom:0, left:0 */
+  inset: 0;
   background-color: rgba(15, 23, 42, 0.92);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: var(--spacing-sm);
-  opacity: 0; /* invisible par défaut */
+  opacity: 0;
   transition: opacity var(--transition);
   gap: var(--spacing-sm);
 }
 .project-card:hover .project-overlay {
-  opacity: 1; /* visible au survol */
+  opacity: 1;
 }
 
 .project-description {
@@ -734,7 +692,6 @@ ul {
   margin-top: var(--spacing-md);
 }
 
-/* Infos de contact */
 .contact-info {
   display: flex;
   flex-direction: column;
@@ -771,7 +728,6 @@ ul {
   color: var(--accent-light);
 }
 
-/* Formulaire */
 .contact-form {
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -804,7 +760,7 @@ textarea {
   font-size: 1rem;
   padding: 0.75rem 1rem;
   transition: border-color var(--transition);
-  resize: vertical; /* textarea : redimensionnable verticalement seulement */
+  resize: vertical;
 }
 
 input:focus,
@@ -814,7 +770,6 @@ textarea:focus {
   box-shadow: 0 0 0 3px rgba(241, 6, 6, 0.2);
 }
 
-/* Champ invalide (classe ajoutée par JS) */
 input.invalid,
 textarea.invalid {
   border-color: #ef4444;
@@ -823,10 +778,9 @@ textarea.invalid {
 .error-message {
   color: #ef4444;
   font-size: 0.85rem;
-  min-height: 1.2em; /* évite le saut de layout */
+  min-height: 1.2em;
 }
 
-/* Message de succès — caché par défaut */
 .success-message {
   background-color: rgba(5, 150, 105, 0.15);
   border: 1px solid #059669;
@@ -834,7 +788,7 @@ textarea.invalid {
   color: #6ee7b7;
   padding: 1rem;
   text-align: center;
-  display: none; /* JS le rendra visible */
+  display: none;
   font-weight: 600;
 }
 
@@ -883,12 +837,11 @@ textarea.invalid {
   border-radius: 50%;
   font-size: 1.2rem;
   cursor: pointer;
-  opacity: 0; /* invisible par défaut */
-  pointer-events: none; /* ne bloque pas les clics quand invisible */
+  opacity: 0;
+  pointer-events: none;
   transition: all var(--transition);
   z-index: 999;
 }
-/* Classe ajoutée par JS quand on a scrollé assez bas */
 .back-to-top.visible {
   opacity: 1;
   pointer-events: auto;
@@ -899,9 +852,7 @@ textarea.invalid {
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   12. ANIMATIONS — scroll reveal
-   Les éléments commencent invisibles et glissent vers le haut
-   quand ils entrent dans le viewport (géré par JS + IntersectionObserver)
+   12. ANIMATIONS
 ═══════════════════════════════════════════════════════════════ */
 .reveal {
   opacity: 0;
@@ -910,13 +861,11 @@ textarea.invalid {
     opacity 0.7s ease,
     transform 0.7s ease;
 }
-/* Classe ajoutée par JS quand l'élément est visible */
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Délais pour faire apparaître les éléments en décalé */
 .reveal-delay-1 {
   transition-delay: 0.1s;
 }
@@ -927,86 +876,21 @@ textarea.invalid {
   transition-delay: 0.3s;
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   13. RESPONSIVE — adaptation mobile
-   Les media queries s'appliquent quand la largeur est inférieure
-   au seuil défini. On adapte la mise en page colonne par colonne.
-═══════════════════════════════════════════════════════════════ */
-
-/* Tablette et mobile (< 900px) */
-@media (max-width: 900px) {
-  .hero {
-    min-height: auto;
-    padding: 5rem 1rem 2rem;
-    gap: 2rem;
-    flex-direction: column; /* passage en colonne */
-    text-align: center;
-    padding-top: 2rem;
+@keyframes dropBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(-140px) scale(0.85) rotate(-8deg);
   }
-  .hero-description {
-    margin: 0 auto var(--spacing-md);
+  60% {
+    opacity: 1;
+    transform: translateY(18px) scale(1.08) rotate(4deg);
   }
-  .hero-buttons {
-    justify-content: center;
+  80% {
+    transform: translateY(-8px) scale(0.97) rotate(-2deg);
   }
-  .profile-photo {
-    width: 250px;
-    height: 250px;
-  }
-
-  .about-grid {
-    grid-template-columns: 1fr; /* une seule colonne */
-  }
-
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Mobile uniquement (< 600px) */
-@media (max-width: 600px) {
-  /* Navigation mobile : menu burger */
-  .nav-links {
-    position: fixed;
-    top: -15px;
-    left: 0;
-    right: 0;
-    background-color: var(--bg-secondary);
-    flex-direction: column;
-    align-items: center;
-    padding: var(--spacing-md);
-    gap: var(--spacing-md);
-    border-bottom: 1px solid var(--border-color);
-    transform: translateY(-120%); /* caché au-dessus de l'écran */
-    transition: transform var(--transition);
-  }
-  /* Classe ajoutée par JS au clic du burger */
-  .nav-links.open {
-    transform: translateY(0);
-  }
-  .burger {
-    display: flex;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr; /* une colonne sur petit mobile */
-  }
-
-  .about-stats {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .footer .container {
-    flex-direction: column;
-    text-align: center;
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
   }
 }
 
@@ -1027,12 +911,6 @@ textarea.invalid {
 .section-title,
 .nav-logo {
   text-shadow:
-    1px 1px 0 rgba(255,255,255,0.6),
-   -1px 1px 0 rgba(255,255,255,0.6),
-    1px -1px 0 rgba(255,255,255,0.6),
-   -1px -1px 0 rgba(255,255,255,0.6);
-
-   text-shadow:
     0 4px 10px rgba(0, 0, 0, 0.6),
     0 0 25px rgba(253, 253, 253, 0.699);
 }
@@ -1042,21 +920,101 @@ textarea.invalid {
   -webkit-text-stroke: 0.3px rgb(245, 239, 212);
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   13. RESPONSIVE
+═══════════════════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  body {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 5rem 1rem 2rem;
+    gap: 2rem;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 2rem;
+  }
+
+  .hero-description {
+    margin: 0 auto var(--spacing-md);
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .profile-photo {
+    width: 250px;
+    height: 250px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 600px) {
+  .nav-links {
+    position: fixed;
+    top: -15px;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-secondary);
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-md);
+    gap: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+    transform: translateY(-120%);
+    transition: transform var(--transition);
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
   .hero-title,
   .section-title,
   .nav-logo {
     text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
   }
-}
 
-@media (max-width: 600px) {
   .top-vines {
     height: 420px;
     top: -130px;
   }
-}
-
-html, body {
-  overscroll-behavior: none;
 }
