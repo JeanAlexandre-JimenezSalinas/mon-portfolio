@@ -81,6 +81,32 @@ PLAN DU FICHIER :
   --transition: 0.3s ease;
 }
 
+/*TOP VINES*/
+.top-vines {
+  position: absolute;
+  top: -170px; /* altura de tu navbar */
+  left: 0;
+  width: 100%;
+  height: 760px;
+
+  background: url("../../img/lianas.webp") top center / 100% auto no-repeat;
+
+  pointer-events: none;
+  z-index: 2;
+
+  animation: sway 8s ease-in-out infinite alternate;
+  transform-origin: top center;
+}
+
+.top-vines::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../../img/lianas.webp") top center / 100% auto no-repeat;
+  opacity: 0.3;
+}
+
+
 /* ═══════════════════════════════════════════════════════════════
    2. RESET & BASE
    On neutralise les styles par défaut des navigateurs
@@ -103,6 +129,7 @@ html {
 }
 
 body {
+  position: relative;
   font-family: var(--font-main);
   background-color: var(--bg-primary);
   color: var(--text-primary);
@@ -236,13 +263,13 @@ ul {
    4. NAVIGATION
 ═══════════════════════════════════════════════════════════════ */
 .navbar {
-  position: fixed; /* reste en haut même en scrollant */
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000; /* au-dessus de tout le reste */
+  z-index: 1000;
   background-color: rgb(255, 255, 255);
-  backdrop-filter: blur(12px); /* flou de l'arrière-plan (glassmorphism) */
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-color);
   transition: all var(--transition);
 }
@@ -349,13 +376,16 @@ ul {
 }
 
 .hero {
-  min-height: 100vh; /* occupe au moins toute la hauteur de l'écran */
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 7rem var(--spacing-sm) var(--spacing-xl);
+  padding: 2rem var(--spacing-sm) var(--spacing-xl);
   max-width: 1100px;
   margin: 0 auto;
   gap: var(--spacing-lg);
+  position: relative;
+  z-index: 1;
+  margin-top: 140px;
 }
 
 .hero-content {
@@ -1014,5 +1044,12 @@ textarea.invalid {
   .section-title,
   .nav-logo {
     text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  }
+}
+
+@media (max-width: 600px) {
+  .top-vines {
+    height: 420px;
+    top: -95px;
   }
 }
