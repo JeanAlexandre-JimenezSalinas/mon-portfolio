@@ -138,20 +138,11 @@ body {
 
   background-image: url("../../img/background.webp");
   background-size: cover;        /* clave */
-  background-position: center top;   /* 👈 centra siempre */
+  background-position: center;   /* 👈 centra siempre */
   background-repeat: no-repeat;   /* evita repetición */
   background-attachment: fixed;
 }
 
-
-@media (max-width: 600px) {
-  body {
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-  }
-}
 /* Liens : on enlève le soulignement par défaut */
 a {
   text-decoration: none;
