@@ -8,6 +8,9 @@
   --text-secondary: #050504; /* texte secondaire */
   --border-color: #d8cbb8; /* bordures douces */
 
+  --form-bg: #ffffff;
+  --form-input-bg: #f9f9f9;
+
   --font-main: "Segoe UI", system-ui, sans-serif;
   --spacing-sm: 1rem; /* 16px */
   --spacing-md: 2rem; /* 32px */
@@ -71,6 +74,10 @@ PLAN DU FICHIER :
   --radius-full: 9999px;
 
   --transition: 0.3s ease;
+
+  --bg-contactForm: #000000;
+  --border-contacForm: #cf7e33;
+  --bg-textarea: #dfdfdf;
 }
 
 /*TOP VINES*/
@@ -729,13 +736,21 @@ ul {
 }
 
 .contact-form {
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-color);
+  background: rgba(0, 0, 0, 0.50); /* 👈 transparence */
+  backdrop-filter: blur(12px);            /* 👈 effet verre */
+  -webkit-backdrop-filter: blur(12px);    /* support iOS */
+
+
   border-radius: var(--radius-lg);
   padding: var(--spacing-md);
+
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sm);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+  color: #222; /* 👈 texte indépendant */
 }
 
 .form-group {
@@ -752,7 +767,7 @@ label {
 
 input,
 textarea {
-  background-color: var(--bg-primary);
+  background-color: var(--bg-textarea);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   color: var(--text-primary);
@@ -1012,5 +1027,11 @@ textarea.invalid {
   .top-vines {
     height: 420px;
     top: -130px;
+  }
+}
+
+@supports not (backdrop-filter: blur(10px)) {
+  .contact-form {
+    background: rgba(0, 0, 0, 0.9);
   }
 }
