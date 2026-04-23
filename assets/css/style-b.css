@@ -84,7 +84,7 @@ PLAN DU FICHIER :
 /*TOP VINES*/
 .top-vines {
   position: absolute;
-  top: -170px; /* altura de tu navbar */
+  top: -250px; /* altura de tu navbar */
   left: 0;
   width: 100%;
   height: 760px;
@@ -376,7 +376,6 @@ ul {
 }
 
 .hero {
-  min-height: 100vh;
   display: flex;
   align-items: center;
   padding: 2rem var(--spacing-sm) var(--spacing-xl);
@@ -385,7 +384,7 @@ ul {
   gap: var(--spacing-lg);
   position: relative;
   z-index: 1;
-  margin-top: 140px;
+  margin-top: 180px;
 }
 
 .hero-content {
@@ -941,7 +940,7 @@ textarea.invalid {
     gap: 2rem;
     flex-direction: column; /* passage en colonne */
     text-align: center;
-    padding-top: 8rem;
+    padding-top: 2rem;
   }
   .hero-description {
     margin: 0 auto var(--spacing-md);
@@ -1053,6 +1052,6 @@ textarea.invalid {
 @media (max-width: 600px) {
   .top-vines {
     height: 420px;
-    top: -95px;
+    top: -130px;
   }
 }
