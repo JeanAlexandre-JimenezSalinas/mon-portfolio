@@ -84,7 +84,7 @@ PLAN DU FICHIER :
 /*TOP VINES*/
 .top-vines {
   position: absolute;
-  top: -250px; /* altura de tu navbar */
+  top: -200px; /* altura de tu navbar */
   left: 0;
   width: 100%;
   height: 760px;
@@ -138,11 +138,20 @@ body {
 
   background-image: url("../../img/background.webp");
   background-size: cover;        /* clave */
-  background-position: center;   /* 👈 centra siempre */
+  background-position: center top;   /* 👈 centra siempre */
   background-repeat: no-repeat;   /* evita repetición */
   background-attachment: fixed;
 }
 
+
+@media (max-width: 600px) {
+  body {
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
+}
 /* Liens : on enlève le soulignement par défaut */
 a {
   text-decoration: none;
@@ -1053,5 +1062,12 @@ textarea.invalid {
   .top-vines {
     height: 420px;
     top: -130px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    background-size: contain;
+    background-position: top center;
   }
 }
