@@ -69,8 +69,8 @@ if (backToTop) {
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   HERO TITLE LETTERS
-═══════════════════════════════════════════════════════════════ */
+   Animated Hero Title
+══════════════════════════════════════════════════════════════ */
 function animateHeroTitleLetters() {
   if (!heroTitle) return;
 
@@ -156,6 +156,93 @@ if (hero && photo) {
     photo.style.transform = 'translate(0, 0) scale(1)';
   });
 }
+
+
+
+/* ═══════════════════════════════════════════════════════════════
+   TITRES DE SECTIONS - ANIMATION LETTRE PAR LETTRE AU SCROLL
+═══════════════════════════════════════════════════════════════ */
+
+function animateTitleLetters(title) {
+  if (!title || title.dataset.animated === 'true') return;
+
+  title.dataset.animated = 'true';
+
+  const originalHTML = title.innerHTML.trim();
+  const temp = document.createElement('div');
+  temp.innerHTML = originalHTML;
+
+  title.innerHTML = '';
+
+  function animateNode(node, parent) {
+    if (node.nodeType === Node.TEXT_NODE) {
+      const text = node.textContent;
+
+      text.split(/(\s+)/).forEach(part => {
+        if (part.trim() === '') {
+          parent.appendChild(document.createTextNode(part));
+          return;
+        }
+
+        const wordSpan = document.createElement('span');
+        wordSpan.classList.add('hero-word');
+
+        part.split('').forEach((char, charIndex) => {
+          const letterSpan = document.createElement('span');
+          letterSpan.classList.add('hero-letter');
+          letterSpan.textContent = char;
+
+          const randomDelay = Math.random() * 0.25;
+          const baseDelay = charIndex * 0.04;
+
+          letterSpan.style.animation =
+            'dropBounce 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards';
+          letterSpan.style.animationDelay = `${baseDelay + randomDelay}s`;
+
+          wordSpan.appendChild(letterSpan);
+        });
+
+        parent.appendChild(wordSpan);
+      });
+    }
+
+    if (node.nodeType === Node.ELEMENT_NODE) {
+      const clone = node.cloneNode(false);
+
+      Array.from(node.childNodes).forEach(child => {
+        animateNode(child, clone);
+      });
+
+      parent.appendChild(clone);
+    }
+  }
+
+  Array.from(temp.childNodes).forEach(node => {
+    animateNode(node, title);
+  });
+}
+
+const sectionTitles = document.querySelectorAll(
+  '.about .section-title, .skills .section-title, .projects .section-title, .contact .section-title'
+);
+
+const sectionTitleObserver = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateTitleLetters(entry.target);
+        sectionTitleObserver.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.4
+  }
+);
+
+sectionTitles.forEach(title => {
+  sectionTitleObserver.observe(title);
+});
 
 /* ═══════════════════════════════════════════════════════════════
    SKILLS
