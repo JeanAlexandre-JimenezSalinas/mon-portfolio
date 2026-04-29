@@ -1,435 +1,407 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio de Jean Alexandre" />
-    <title>Portfolio — JeanAlexandre</title>
-    <link rel="icon" href="favicon.png" />
-    <link rel="stylesheet" href="assets/css/style-b.css" />
-  </head>
-  <body>
-    <!-- Votre contenu va ici -->
-    <header class="navbar" id="navbar">
-      <nav class="nav-container">
-        <!-- Votre prénom/logo — remplacez le texte -->
-        <a href="#hero" class="nav-logo">Jean Alexandre<span>.</span></a>
 
-        <ul class="nav-links" id="nav-links">
-          <li><a href="#about">À propos</a></li>
-          <li><a href="#skills">Compétences</a></li>
-          <li><a href="#projects">Projets</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio de Jean Alexandre" />
+  <title>Portfolio — JeanAlexandre</title>
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
 
-        <!-- Bouton burger pour mobile (3 traits) -->
-        <button class="burger" id="burger" aria-label="Menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </nav>
-    </header>
+<body>
+  <!-- Votre contenu va ici -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-container">
+      <!-- Votre prénom/logo — remplacez le texte -->
+      <a href="#hero" class="nav-logo">Jean Alexandre<span>.</span></a>
 
-    <div class="top-vines"></div>
-    
-    <section class="hero" id="hero">
-      <div class="hero-content">
-        <p class="hero-subtitle">Bonjour, je suis</p>
-        <h1 class="hero-title" data-text="Jean Alexandre Jimenez Salinas"></h1>
-        <p class="hero-role">Futur développeur web</p>
-        <p class="hero-description">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <div class="hero-buttons">
-          <a href="#projects" class="btn btn-primary">Voir mes projets</a>
-          <a href="#contact" class="btn btn-outline">Me contacter</a>
-        </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Bouton burger pour mobile (3 traits) -->
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="top-vines"></div>
+
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <p class="hero-subtitle">Bonjour, je suis</p>
+      <h1 class="hero-title" data-text="Jean Alexandre Jimenez Salinas"></h1>
+      <p class="hero-role">Futur développeur web</p>
+      <p class="hero-description">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+        <a href="#contact" class="btn btn-outline">Me contacter</a>
       </div>
-      <div class="hero-image">
-        <!-- Votre photo — en attendant utilisez picsum.photos -->
-        <img
-          src="img/moi.png"
-          alt="Photo de JeanAlexandre"
-          class="profile-photo"
-        />
-      </div>
-    </section>
+    </div>
+    <div class="hero-image">
+      <!-- Votre photo — en attendant utilisez picsum.photos -->
+      <img src="img/moi.png" alt="Photo de JeanAlexandre" class="profile-photo" />
+    </div>
+  </section>
 
-    <!--A PROPOS-->
-    <section class="about" id="about">
-      <div class="container">
-        <h2 class="section-title">
-          À propos <span class="highlight">de moi</span>
-        </h2>
+  <!--A PROPOS-->
+  <section class="about" id="about">
+    <div class="container">
+      <h2 class="section-title">
+        À propos <span class="highlight">de moi</span>
+      </h2>
 
-        <div class="about-grid">
-          <div class="about-text">
-            <!--
+      <div class="about-grid">
+        <div class="about-text">
+          <!--
           Racontez votre histoire en 3-5 phrases.
           D'où venez-vous ? Pourquoi le numérique ?
           Qu'est-ce qui vous motive ?
           -->
-            <p>
-              [Votre texte de présentation ici. Parlez de votre parcours, de
-              votre reconversion, de ce qui vous a amené vers le numérique.]
-            </p>
-            <p>
-              [Une deuxième phrase sur vos centres d'intérêt ou vos objectifs
-              professionnels.]
-            </p>
+          <p>
+            [Votre texte de présentation ici. Parlez de votre parcours, de
+            votre reconversion, de ce qui vous a amené vers le numérique.]
+          </p>
+          <p>
+            [Une deuxième phrase sur vos centres d'intérêt ou vos objectifs
+            professionnels.]
+          </p>
 
-            <!-- Lien vers un CV PDF — mettez votre propre lien -->
-            <a href="https://github.com/JeanAlexandre-JimenezSalinas/mon-portfolio/releases/download/v1.0/Test.cv.pdf" class="btn btn-primary" download>
-              Télécharger mon CV
-            </a>
-          </div>
-
-          <!-- Quelques stats ou faits — modifiez les chiffres et labels -->
-          <div class="about-stats">
-            <div class="stat-card">
-              <span class="stat-number">6</span>
-              <span class="stat-label">Mois de formation</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-number">3</span>
-              <span class="stat-label">Projets réalisés</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-number">100%</span>
-              <span class="stat-label">Motivé</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-number">∞</span>
-              <span class="stat-label">Curiosité</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!--COMPETENCES-->
-    <section class="skills" id="skills">
-      <div class="container">
-        <h2 class="section-title">
-          Mes <span class="highlight">compétences</span>
-        </h2>
-
-        <div class="skills-grid">
-          <!-- Catégorie 1 -->
-          <div class="skill-category">
-            <h3>Développement web</h3>
-
-            <!--
-          data-level = le pourcentage de la barre (0 à 100)
-          Modifiez les noms et les pourcentages selon votre niveau réel.
-          Soyez honnête — un recruteur peut vérifier !
-          -->
-            <div class="skill-item">
-              <div class="skill-header">
-                <span class="skill-name">HTML</span>
-                <span class="skill-percent">75%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" data-level="75"></div>
-              </div>
-            </div>
-
-            <div class="skill-item">
-              <div class="skill-header">
-                <span class="skill-name">CSS</span>
-                <span class="skill-percent">60%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" data-level="60"></div>
-              </div>
-            </div>
-
-            <div class="skill-item">
-              <div class="skill-header">
-                <span class="skill-name">JavaScript</span>
-                <span class="skill-percent">40%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" data-level="40"></div>
-              </div>
-            </div>
-          </div>
-          <!-- fin .skill-category -->
-
-          <!-- Catégorie 2 — modifiez selon vos compétences -->
-          <div class="skill-category">
-            <h3>Systèmes &amp; réseaux</h3>
-
-            <div class="skill-item">
-              <div class="skill-header">
-                <span class="skill-name">Windows / Linux</span>
-                <span class="skill-percent">70%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" data-level="70"></div>
-              </div>
-            </div>
-
-            <div class="skill-item">
-              <div class="skill-header">
-                <span class="skill-name">Réseaux TCP/IP</span>
-                <span class="skill-percent">55%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" data-level="55"></div>
-              </div>
-            </div>
-
-            <div class="skill-item">
-              <div class="skill-header">
-                <span class="skill-name">VS Code</span>
-                <span class="skill-percent">80%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" data-level="80"></div>
-              </div>
-            </div>
-          </div>
-          <!-- fin .skill-category -->
-        </div>
-        <!-- fin .skills-grid -->
-      </div>
-    </section>
-
-    <!--PROJETS-->
-<section class="projects" id="projects">
-  <div class="container">
-    <h2 class="section-title">
-      Mes <span class="highlight">projets</span>
-    </h2>
-    <p class="section-subtitle">
-      Quelques réalisations — cliquez pour voir le code ou la démo
-    </p>
-
-    <div class="projects-grid">
-      <!-- Projet 1 -->
-      <div class="project-card">
-        <div class="project-image">
-          <video autoplay muted loop playsinline preload="metadata">
-            <source src="../../videos/mono1.mp4" type="video/mp4">
-          </video>
-
-          <div class="project-overlay">
-            <p class="project-description">
-              [Description courte de ce projet — ce que vous avez appris,
-              les technologies utilisées, le problème résolu.]
-            </p>
-            <div class="project-links">
-              <a href="#" class="btn btn-small">Voir le code</a>
-              <a href="#" class="btn btn-small btn-outline">Démo live</a>
-            </div>
-          </div>
+          <!-- Lien vers un CV PDF — mettez votre propre lien -->
+          <a href="https://github.com/JeanAlexandre-JimenezSalinas/mon-portfolio/releases/download/v1.0/Test.cv.pdf"
+            class="btn btn-primary" download>
+            Télécharger mon CV
+          </a>
         </div>
 
-        <div class="project-info">
-          <h3 class="project-title">Fighting for a Coconut</h3>
-          <div class="project-tags">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
+        <!-- Quelques stats ou faits — modifiez les chiffres et labels -->
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-number">6</span>
+            <span class="stat-label">Mois de formation</span>
           </div>
-        </div>
-      </div>
-
-      <!-- Projet 2 -->
-      <div class="project-card">
-        <div class="project-image">
-          <video autoplay muted loop playsinline preload="metadata">
-            <source src="../../videos/mono2.mp4" type="video/mp4">
-          </video>
-
-          <div class="project-overlay">
-            <p class="project-description">
-              [Description de votre deuxième projet.]
-            </p>
-            <div class="project-links">
-              <a href="#" class="btn btn-small">Voir le code</a>
-              <a href="#" class="btn btn-small btn-outline">Démo live</a>
-            </div>
+          <div class="stat-card">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Projets réalisés</span>
           </div>
-        </div>
-
-        <div class="project-info">
-          <h3 class="project-title">Opening my Coconut</h3>
-          <div class="project-tags">
-            <span class="tag">Python</span>
-            <span class="tag">Linux</span>
+          <div class="stat-card">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Motivé</span>
           </div>
-        </div>
-      </div>
-
-      <!-- Projet 3 -->
-      <div class="project-card">
-        <div class="project-image">
-          <video autoplay muted loop playsinline preload="metadata">
-            <source src="../../videos/mono3.mp4" type="video/mp4">
-          </video>
-
-          <div class="project-overlay">
-            <p class="project-description">
-              [Description de votre troisième projet.]
-            </p>
-            <div class="project-links">
-              <a href="#" class="btn btn-small">Voir le code</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-info">
-          <h3 class="project-title">Eating my Coconut</h3>
-          <div class="project-tags">
-            <span class="tag">Réseau</span>
-            <span class="tag">CISCO</span>
+          <div class="stat-card">
+            <span class="stat-number">∞</span>
+            <span class="stat-label">Curiosité</span>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-    <!--CONTACT-->
-    <section class="contact" id="contact">
-      <div class="container">
-        <h2 class="section-title">
-          Me <span class="highlight">contacter</span>
-        </h2>
-        <p class="section-subtitle">
-          Une question ? Une opportunité ? N'hésitez pas !
-        </p>
+  <!--COMPETENCES-->
+  <section class="skills" id="skills">
+    <div class="container">
+      <h2 class="section-title">
+        Mes <span class="highlight">compétences</span>
+      </h2>
 
-        <div class="contact-grid">
-          <!-- Informations de contact -->
-          <div class="contact-info">
-            <div class="contact-item">
-              <div class="contact-icon">✉</div>
-              <div>
-                <h4>Email</h4>
-                <!-- Remplacez par votre email -->
-                <a href="#" class="email-link" data-user="jalexandrejs88" data-domain="gmail.com">Envoyer un mail</a>
-              </div>
+      <div class="skills-grid">
+        <!-- Catégorie 1 -->
+        <div class="skill-category">
+          <h3>Développement web</h3>
+
+          <!--
+          data-level = le pourcentage de la barre (0 à 100)
+          Modifiez les noms et les pourcentages selon votre niveau réel.
+          Soyez honnête — un recruteur peut vérifier !
+          -->
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">HTML</span>
+              <span class="skill-percent">75%</span>
             </div>
-            <div class="contact-item">
-              <div class="contact-icon">📍</div>
-              <div>
-                <h4>Localisation</h4>
-                <!-- Votre ville -->
-                <p>Brest, France</p>
-              </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-level="75"></div>
             </div>
-            <div class="contact-item">
-              <div class="contact-icon">💼</div>
-              <div>
-                <h4>LinkedIn</h4>
-                <!-- Votre profil LinkedIn -->
-                <p>
-                  <a href="https://www.linkedin.com/in/jeanalexandrejs88"
-                    >Jean Alexandre Jimenez Salinas</a
-                  >
-                </p>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">CSS</span>
+              <span class="skill-percent">60%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-level="60"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">JavaScript</span>
+              <span class="skill-percent">40%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-level="40"></div>
+            </div>
+          </div>
+        </div>
+        <!-- fin .skill-category -->
+
+        <!-- Catégorie 2 — modifiez selon vos compétences -->
+        <div class="skill-category">
+          <h3>Systèmes &amp; réseaux</h3>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Windows / Linux</span>
+              <span class="skill-percent">70%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-level="70"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Réseaux TCP/IP</span>
+              <span class="skill-percent">55%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-level="55"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">VS Code</span>
+              <span class="skill-percent">80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-level="80"></div>
+            </div>
+          </div>
+        </div>
+        <!-- fin .skill-category -->
+      </div>
+      <!-- fin .skills-grid -->
+    </div>
+  </section>
+
+  <!--PROJETS-->
+  <section class="projects" id="projects">
+    <div class="container">
+      <h2 class="section-title">
+        Mes <span class="highlight">projets</span>
+      </h2>
+      <p class="section-subtitle">
+        Quelques réalisations — cliquez pour voir le code ou la démo
+      </p>
+
+      <div class="projects-grid">
+        <!-- Projet 1 -->
+        <div class="project-card">
+          <div class="project-image">
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="../../videos/mono1.mp4" type="video/mp4">
+            </video>
+
+            <div class="project-overlay">
+              <p class="project-description">
+                [Description courte de ce projet — ce que vous avez appris,
+                les technologies utilisées, le problème résolu.]
+              </p>
+              <div class="project-links">
+                <a href="#" class="btn btn-small">Voir le code</a>
+                <a href="#" class="btn btn-small btn-outline">Démo live</a>
               </div>
             </div>
           </div>
 
-          <!-- Formulaire -->
-          <!--
+          <div class="project-info">
+            <h3 class="project-title">Fighting for a Coconut</h3>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 2 -->
+        <div class="project-card">
+          <div class="project-image">
+
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="../../videos/mono2.mp4" type="video/mp4">
+            </video>
+
+            <div class="project-overlay">
+              <p class="project-description">
+                [Description de votre deuxième projet.]
+              </p>
+              <div class="project-links">
+                <a href="#" class="btn btn-small">Voir le code</a>
+                <a href="#" class="btn btn-small btn-outline">Démo live</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-info">
+            <h3 class="project-title">Opening my Coconut</h3>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Linux</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 3 -->
+        <div class="project-card">
+          <div class="project-image">
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="../../videos/mono3.mp4" type="video/mp4">
+            </video>
+
+            <div class="project-overlay">
+              <p class="project-description">
+                [Description de votre troisième projet.]
+              </p>
+              <div class="project-links">
+                <a href="#" class="btn btn-small">Voir le code</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-info">
+            <h3 class="project-title">Eating my Coconut</h3>
+            <div class="project-tags">
+              <span class="tag">Réseau</span>
+              <span class="tag">CISCO</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--CONTACT-->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="section-title">
+        Me <span class="highlight">contacter</span>
+      </h2>
+      <p class="section-subtitle">
+        Une question ? Une opportunité ? N'hésitez pas !
+      </p>
+
+      <div class="contact-grid">
+        <!-- Informations de contact -->
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">✉</div>
+            <div>
+              <h4>Email</h4>
+              <!-- Remplacez par votre email -->
+              <a href="#" class="email-link" data-user="jalexandrejs88" data-domain="gmail.com">Envoyer un mail</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4>Localisation</h4>
+              <!-- Votre ville -->
+              <p>Brest, France</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">💼</div>
+            <div>
+              <h4>LinkedIn</h4>
+              <!-- Votre profil LinkedIn -->
+              <p>
+                <a href="https://www.linkedin.com/in/jeanalexandrejs88">Jean Alexandre Jimenez Salinas</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulaire -->
+        <!--
         NOTE : on n'utilise pas <form action="..."> car on valide en JS.
         Pour un vrai envoi d'email, inscrivez-vous sur formspree.io
         et remplacez action="#" par votre URL Formspree.
         -->
-          <form class="contact-form" id="contact-form"
-      action="https://formspree.io/f/xwvanady"
-      method="POST"
-      novalidate>
-            <div class="form-group">
-              <label for="name">Votre nom</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Prénom Nom"
-                required
-              />
-              <!-- Le message d'erreur est affiché/caché par JS -->
-              <span class="error-message" id="name-error"></span>
-            </div>
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/xwvanady" method="POST" novalidate>
+          <div class="form-group">
+            <label for="name">Votre nom</label>
+            <input type="text" id="name" name="name" placeholder="Prénom Nom" required />
+            <!-- Le message d'erreur est affiché/caché par JS -->
+            <span class="error-message" id="name-error"></span>
+          </div>
 
-            <div class="form-group">
-              <label for="email">Votre email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="vous@exemple.com"
-                required
-              />
-              <span class="error-message" id="email-error"></span>
-            </div>
+          <div class="form-group">
+            <label for="email">Votre email</label>
+            <input type="email" id="email" name="email" placeholder="vous@exemple.com" required />
+            <span class="error-message" id="email-error"></span>
+          </div>
 
-            <div class="form-group">
-              <label for="subject">Sujet</label>
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                placeholder="Objet de votre message"
-                required
-              />
-              <span class="error-message" id="subject-error"></span>
-            </div>
+          <div class="form-group">
+            <label for="subject">Sujet</label>
+            <input type="text" id="subject" name="subject" placeholder="Objet de votre message" required />
+            <span class="error-message" id="subject-error"></span>
+          </div>
 
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="5"
-                placeholder="Votre message ici..."
-                required
-              ></textarea>
-              <span class="error-message" id="message-error"></span>
-            </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Votre message ici..." required></textarea>
+            <span class="error-message" id="message-error"></span>
+          </div>
 
-            <button type="submit" class="btn btn-primary btn-full">
-              Envoyer le message
-            </button>
+          <button type="submit" class="btn btn-primary btn-full">
+            Envoyer le message
+          </button>
 
-            <!-- Message de succès — caché par défaut, visible après envoi -->
-            <div class="success-message" id="success-message">
-              ✅ Message envoyé ! Je vous répondrai sous 48h.
-            </div>
-          </form>
-        </div>
-        <!-- fin .contact-grid -->
+          <!-- Message de succès — caché par défaut, visible après envoi -->
+          <div class="success-message" id="success-message">
+            ✅ Message envoyé ! Je vous répondrai sous 48h.
+          </div>
+        </form>
       </div>
-    </section>
+      <!-- fin .contact-grid -->
+    </div>
+  </section>
 
-    <!--FOOTER-->
-    <footer class="footer">
-      <div class="container">
-        <p>
-          <!-- Remplacez par votre prénom et l'année en cours -->
-          © 2026 <span class="highlight">Jean Alexandre</span>
-          — Portfolio réalisé en HTML/CSS/JS
-        </p>
-        <!-- Liens vers vos profils — ajoutez ou supprimez -->
-        <div class="footer-links">
-          <a href="https://github.com/JeanAlexandre-JimenezSalinas">GitHub</a>
-          <a href="https://www.linkedin.com/in/jeanalexandrejs88/">LinkedIn</a>
-          <a href="#" class="email-link" data-user="jalexandrejs88" data-domain="gmail.com">Email</a>
-        </div>
+  <!--FOOTER-->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        <!-- Remplacez par votre prénom et l'année en cours -->
+        © 2026 <span class="highlight">Jean Alexandre</span>
+        — Portfolio réalisé en HTML/CSS/JS
+      </p>
+      <!-- Liens vers vos profils — ajoutez ou supprimez -->
+      <div class="footer-links">
+        <a href="https://github.com/JeanAlexandre-JimenezSalinas">GitHub</a>
+        <a href="https://www.linkedin.com/in/jeanalexandrejs88/">LinkedIn</a>
+        <a href="#" class="email-link" data-user="jalexandrejs88" data-domain="gmail.com">Email</a>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <!--BOUTON "RETOUR EN HAUT"-->
-    <button class="back-to-top" id="back-to-top" aria-label="Retour en haut">
-      ↑
-    </button>
+  <!--BOUTON "RETOUR EN HAUT"-->
+  <button class="back-to-top" id="back-to-top" aria-label="Retour en haut">
+    ↑
+  </button>
 
-    <!--JAVASCRIPT-->
-    <script src="assets/js/script.js" defer></script>
-  </body>
+  <!--JAVASCRIPT-->
+  <script src="assets/js/script.js" defer></script>
+</body>
+
 </html>
