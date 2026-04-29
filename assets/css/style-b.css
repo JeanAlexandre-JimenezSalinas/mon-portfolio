@@ -79,7 +79,7 @@ PLAN DU FICHIER :
   --border-contacForm: #cf7e33;
   --bg-textarea: #dfdfdf;
 
-  --site-scale: 1;
+  --text-contact: #333333;
 }
 
 /*PAGE WRAPPER*/
@@ -796,7 +796,7 @@ textarea {
   background-color: var(--bg-textarea);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  color: var(--text-primary);
+  color: var(--text-contact);
   font-family: var(--font-main);
   font-size: 1rem;
   padding: 0.75rem 1rem;
