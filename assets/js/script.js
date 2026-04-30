@@ -225,23 +225,23 @@ const sectionTitles = document.querySelectorAll(
   ".about .section-title, .skills .section-title, .projects .section-title, .contact .section-title",
 );
 
-const sectionTitleObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        animateTitleLetters(entry.target);
-        initSectionTitleHover(entry.target);
-        sectionTitleObserver.unobserve(entry.target);
-      }
-    });
-  },
-  {
-    threshold: 0.4,
-  },
-);
+document.addEventListener("DOMContentLoaded", () => {
+  const sectionTitleObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateTitleLetters(entry.target);
+          initSectionTitleHover(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.4 },
+  );
 
-sectionTitles.forEach((title) => {
-  sectionTitleObserver.observe(title);
+  document.querySelectorAll(".section-title").forEach((title) => {
+    sectionTitleObserver.observe(title);
+  });
 });
 
 /* ═══════════════════════════════════════════════════════════════
