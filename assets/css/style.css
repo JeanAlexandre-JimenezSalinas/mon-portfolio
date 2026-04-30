@@ -1,12 +1,11 @@
 :root {
-  /* ── Modifiez ces couleurs pour personnaliser votre portfolio ── */
-  --bg-primary: #000000; /* fond clair type bois / papier */
-  --bg-secondary: #000000; /* cartes et sections alternées */
-  --accent-color: #c8a27a; /* madera clara / dorado suave */
-  --accent-light: #e6caa3; /* version plus claire */
-  --text-primary: #2f2a24; /* texte principal */
-  --text-secondary: #050504; /* texte secondaire */
-  --border-color: #d8cbb8; /* bordures douces */
+  --bg-primary: #000000;
+  --bg-secondary: #000000;
+  --accent-color: #c8a27a;
+  --accent-light: #e6caa3;
+  --text-primary: #2f2a24;
+  --text-secondary: #050504;
+  --border-color: #d8cbb8;
 
   --form-bg: #ffffff;
   --form-input-bg: #f9f9f9;
@@ -20,7 +19,6 @@
 
 /*
 ══════════════════════════════════════════════════════════════════
-TP MODULE 5 — style.css
 Portfolio personnel — HTML/CSS/JS
 ══════════════════════════════════════════════════════════════════
 
@@ -82,19 +80,12 @@ PLAN DU FICHIER :
   --text-contact: #333333;
 }
 
-/*PAGE WRAPPER*/
-.page-wrapper {
-  transform: scale(var(--site-scale));
-  transform-origin: top center;
-}
-
 /*TOP VINES*/
 .top-vines {
   position: absolute;
-  top: 0%;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 47.5rem;
   background: url("../../img/lianas.webp") top center / 100% auto no-repeat;
   pointer-events: none;
   z-index: 2;
@@ -124,6 +115,7 @@ PLAN DU FICHIER :
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  font-size: 100%;
 }
 
 body {
@@ -261,7 +253,7 @@ ul {
 }
 
 .nav-container {
-  max-width: 1100px;
+  max-width: 68.75rem;
   margin: 0 auto;
   padding: 1rem var(--spacing-sm);
   display: flex;
@@ -357,14 +349,22 @@ ul {
 
 .profile-photo {
   animation: float 4s ease-in-out infinite;
+  width: clamp(15rem, 42vw, 37.5rem);
+  height: clamp(15rem, 42vw, 37.5rem);
+  object-fit: cover;
+  border-radius: 50%;
+  user-select: none;
+  -webkit-user-select: none;
+
+  -webkit-user-drag: none;
 }
 
 .hero {
   display: flex;
   align-items: center;
   min-height: 100dvh;
-  padding: 180px var(--spacing-sm) var(--spacing-xl);
-  max-width: 1100px;
+  padding: 11rem var(--spacing-sm) var(--spacing-xl);
+  max-width: 68.75rem;
   margin: 0 auto;
   gap: var(--spacing-lg);
   position: relative;
@@ -763,9 +763,9 @@ ul {
 }
 
 .contact-form {
-  background: rgba(0, 0, 0, 0.5); /* 👈 transparence */
-  backdrop-filter: blur(12px); /* 👈 effet verre */
-  -webkit-backdrop-filter: blur(12px); /* support iOS */
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 
   border-radius: var(--radius-lg);
   padding: var(--spacing-md);
@@ -776,7 +776,7 @@ ul {
 
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 
-  color: #222; /* 👈 texte indépendant */
+  color: #222;
 }
 
 .form-group {
@@ -831,6 +831,41 @@ textarea.invalid {
   text-align: center;
   display: none;
   font-weight: 600;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   GIF CONTACT SUCCESS
+═══════════════════════════════════════════════════════════════ */
+
+.contact-gif {
+  opacity: 0;
+  filter: blur(10px);
+  pointer-events: none;
+  transition:
+    opacity 0.5s ease,
+    filter 0.5s ease;
+  margin-bottom: var(--spacing-md);
+  display: flex;
+  justify-content: center;
+}
+
+.contact-gif img {
+  max-width: 200px;
+}
+
+.contact-gif,
+.contact-gif img {
+  user-select: none;
+  -webkit-user-select: none;
+
+  -webkit-user-drag: none;
+
+  pointer-events: none;
+}
+
+.contact-gif.show {
+  opacity: 1;
+  filter: blur(0);
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -893,8 +928,21 @@ textarea.invalid {
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   12. ANIMATIONS
+   12. TITLE SECTION ANIMATION
 ═══════════════════════════════════════════════════════════════ */
+.hero-title,
+.section-title {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.hero-title,
+.section-title,
+.hero-word,
+.hero-letter {
+  -webkit-touch-callout: none;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -1062,10 +1110,6 @@ textarea.invalid {
   .section-title,
   .nav-logo {
     text-shadow: 0 3px 10px rgba(0, 0, 0, 1);
-  }
-
-  .top-vines {
-    top: 0%;
   }
 }
 
