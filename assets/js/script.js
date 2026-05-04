@@ -231,7 +231,6 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           animateTitleLetters(entry.target);
-          initSectionTitleHover(entry.target);
           observer.unobserve(entry.target);
         }
       });
