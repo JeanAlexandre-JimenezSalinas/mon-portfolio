@@ -194,10 +194,10 @@ ul {
   border-color: var(--accent-color);
 }
 .btn-primary:hover {
-  background-color: #f75f07a4;
+  background-color: #f75f07da;
   border-color: #d99228;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(237, 58, 58, 0.4);
+  box-shadow: 0 20px 25px rgba(237, 58, 58, 0.4);
 }
 
 .btn-outline {
@@ -797,10 +797,10 @@ ul {
 }
 
 .contact-icon:hover {
-  background-color: #f75f07a4;
-  border-color: #d99228;
+  background-color: rgb(255, 73, 1, 0.8);
+  border: #d99228, 2px, solid;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(237, 58, 58, 0.4);
+  box-shadow: 0 8px 25px rgba(255, 73, 1, 0.6);
 }
 
 .contact-item h4 {
@@ -844,7 +844,7 @@ label {
 input,
 textarea {
   background-color: var(--bg-textarea);
-  border: 1px solid var(--border-color);
+  border: 1px solid rgb(255, 155, 41);
   border-radius: var(--radius-md);
   color: var(--text-contact);
   font-family: var(--font-main);
@@ -854,16 +854,35 @@ textarea {
   resize: vertical;
 }
 
+input:hover,
+textarea:hover {
+  box-shadow:
+    0 0 0 1px rgb(255, 73, 1),
+    0 0 5px rgba(255, 73, 1, 0.7);
+}
+
 input:focus,
 textarea:focus {
   outline: none;
   border-color: var(--accent-color);
   box-shadow: 0 0 0 3px rgba(241, 6, 6, 0.2);
+  outline: none;
+  border-color: var(--accent-teal);
+
+  box-shadow:
+    0 0 0 2px rgb(255, 73, 1),
+    0 0 20px rgba(255, 73, 1, 0.7);
 }
 
 input.invalid,
 textarea.invalid {
   border-color: #ef4444;
+}
+
+input:hover textarea:focus {
+  box-shadow:
+    0 0 0 1px rgb(255, 73, 1),
+    0 0 10px rgba(255, 73, 1, 0.7);
 }
 
 .error-message {
