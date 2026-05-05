@@ -151,6 +151,26 @@ ul {
 /* ═══════════════════════════════════════════════════════════════
    3. COMPOSANTS RÉUTILISABLES
 ═══════════════════════════════════════════════════════════════ */
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #222;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffa600;
+  border-radius: 10px;
+}
+
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #ff9100 #222;
+}
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
