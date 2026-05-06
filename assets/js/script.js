@@ -308,9 +308,12 @@ if (contactForm) {
 
     isValid =
       validateField(name, "name-error", "Votre nom est requis") && isValid;
+
     isValid = validateEmail(email, "email-error") && isValid;
+
     isValid =
       validateField(subject, "subject-error", "Le sujet est requis") && isValid;
+
     isValid =
       validateField(message, "message-error", "Votre message est requis") &&
       isValid;
@@ -318,6 +321,7 @@ if (contactForm) {
     if (!isValid) return;
 
     const submitBtn = contactForm.querySelector('button[type="submit"]');
+
     submitBtn.textContent = "Envoi en cours...";
     submitBtn.disabled = true;
 
@@ -335,19 +339,15 @@ if (contactForm) {
       }
 
       contactForm.reset();
-      if (successMsg) successMsg.style.display = "block";
 
-      /* 🎉 MOSTRAR GIF */
-      if (contactGif) {
-        contactGif.classList.add("show");
-
-        setTimeout(() => {
-          contactGif.classList.remove("show");
-        }, 6000);
+      if (successMsg) {
+        successMsg.style.display = "block";
       }
 
       setTimeout(() => {
-        if (successMsg) successMsg.style.display = "none";
+        if (successMsg) {
+          successMsg.style.display = "none";
+        }
       }, 5000);
     } catch (error) {
       alert("Le message n'a pas pu être envoyé. Réessaie plus tard.");
